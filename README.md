@@ -1,9 +1,9 @@
 <div align="center">
 <br />
 
-![Logr](.github/banner.jpg)
+![Logger](.github/banner.jpg)
 
-<h3>LOGR 📝</h3>
+<h3>LOGGER 📝</h3>
 
 #### Gorgeous isomorphic logging
 
@@ -20,19 +20,19 @@ Install package:
 
 ```sh
 # npm
-npm install @benstack/logr
+npm install @100x/logger
 
 # yarn
-yarn add @benstack/logr
+yarn add @100x/logger
 
 # pnpm
-pnpm install @benstack/logr
+pnpm install @100x/logger
 
 # bun
-bun install @benstack/logr
+bun install @100x/logger
 
 # deno
-import * as logr from "https://esm.sh/@benstack/logr"
+import * as logger from "https://esm.sh/@100x/logger"
 ```
 
 ```js
@@ -40,24 +40,24 @@ import {
   createLogger,
   Levels,
   gradients
-} from "@benstack/logr";
+} from "@100x/logger";
 
-const logr = createLogger({
+const logger = createLogger({
   name: "LOGGER",
   level: Levels.DEBUG,
 	color: gradients.purple
 })
 
-logr.debug("Debug message.")
-logr.info("Info.")
-logr.success("Same level as info.")
-logr.warn("Uh oh.")
-logr.error("I don't feel so good...")
-logr.critical("I'm done for!")
+logger.debug("Debug message.")
+logger.info("Info.")
+logger.success("Same level as info.")
+logger.warn("Uh oh.")
+logger.error("I don't feel so good...")
+logger.critical("I'm done for!")
 
-logr.whisper("I'm quiet, but not that quiet.")
-logr.speak("You can normally hear me.")
-logr.shout("You can always hear me, even in production.")
+logger.whisper("I'm quiet, but not that quiet.")
+logger.speak("You can normally hear me.")
+logger.shout("You can always hear me, even in production.")
 
 ```
 
