@@ -11,28 +11,13 @@
 [![GitHub stars](https://img.shields.io/github/stars/freeCodeCamp/freeCodeCamp.svg?style=social&label=Star&maxAge=2592000)](https://github.com/freeCodeCamp/freeCodeCamp)
 [![NuGet stable version](https://badgen.net/nuget/v/newtonsoft.json)](https://nuget.org/packages/newtonsoft.json)
 
-*A tiny and beautiful logger for Node, Deno, and the browser.*
+*A tiny, beautiful logger for all JavaScript runtimes.*
 </div>
 
 ## Usage
 
-Install package:
-
 ```sh
-# npm
-npm install @100x/logger
-
-# yarn
-yarn add @100x/logger
-
-# pnpm
-pnpm install @100x/logger
-
-# bun
-bun install @100x/logger
-
-# deno
-import * as logger from "https://esm.sh/@100x/logger"
+pnpm i @benstack/logger
 ```
 
 ```js
@@ -40,7 +25,7 @@ import {
   createLogger,
   Levels,
   gradients
-} from "@100x/logger";
+} from "@benstack/logger";
 
 const logger = createLogger({
   name: "LOGGER",
@@ -62,14 +47,6 @@ logger.shout("You can always hear me, even in production.")
 ```
 
 ![screenshot](/.github/screenshot.PNG)
-
-## Development
-
-- Clone this repository
-- Install latest LTS version of [Node.js](https://nodejs.org/en/)
-- Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable`
-- Install dependencies using `pnpm install`
-- Run interactive tests using `pnpm dev`
 
 ## License
 
