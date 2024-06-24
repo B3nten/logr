@@ -1,7 +1,5 @@
-import { FancyConsoleWriter } from "./fancy-writer";
-import { gradients, type RGB } from "./gradients";
-import { SimpleConsoleWriter } from "./simple-writer";
-import { Writer, type WriterPrototype } from "./writer";
+import { Writer, type WriterPrototype, FancyConsoleWriter, SimpleConsoleWriter } from "./writer";
+import { gradients, type RGB } from "./formatting";
 
 const env =
 	globalThis.process?.env ||
@@ -25,6 +23,7 @@ class Logger {
 		CRITICAL: 4,
 		PRODUCTION: 5,
 	} as const;
+	
 	constructor(options: {
 		name: string;
 		level: (typeof Logger.LogLevels)[keyof typeof Logger.LogLevels];
@@ -36,6 +35,7 @@ class Logger {
 		// @ts-expect-error
 		this.writer = new options.writer(this.name, this.level, options.color);
 	}
+
 	log(
 		input: unknown[],
 		level: number = Logger.LogLevels.INFO,
@@ -51,6 +51,7 @@ class Logger {
 			},
 		});
 	}
+
 	name: string;
 	level: number;
 	writer?: Writer;

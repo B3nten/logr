@@ -2,7 +2,7 @@ import {
   createLogger,
   Levels,
   gradients
-} from "../src";
+} from "../build/mod";
 
 const logr = createLogger({
   name: "LOGGER",
